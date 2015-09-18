@@ -2,7 +2,7 @@
 # define FRACTOL_H
 
 # include "libft.h"
-# include "./minilibx_macos/mlx.h"
+# include "mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 
@@ -21,18 +21,15 @@ typedef struct	s_env
 	int			bpp;
 	int			endian;
 	int			sizeline;
+	int			color;
+	double		z;
 }				t_env;
 
-// typedef struct	s_img
-// {
-// 	void		*img;
-// 	int			width;
-// 	int			height;
-// 	char		*data;
-// 	int			bpp;
-// 	int			endian;
-// 	int			sizeline;
-// }				t_img;
+typedef struct	s_point
+{
+	double		a;
+	double		b;
+}				t_point;
 
 int		get_name(char *name);
 void	select_type(int type);
@@ -41,6 +38,7 @@ int 	expose_hook(t_env *e);
 int 	expose_hook(t_env *e);
 int		mandelbrot(void);
 int 	key_hook(int keycode, t_env *e);
+int		fractal_mandelbrot(t_point *p);
 
 
 #endif

@@ -28,16 +28,10 @@ int		main(int argc, char **argv)
 	{
 		type = get_name(argv[1]);
 		if (type != 0)
-		{
 			select_type(type);
-		}
 		else
-		{
-			ft_putstr("Mauvais Nom!");
-		}
+			ft_putstr("Mauvais Nom!\n");
 	}
 	else
-	{
-		ft_putstr("Pas bon nombre argument!");
-	}
+		ft_putstr("Pas bon nombre argument!\n");
 }
