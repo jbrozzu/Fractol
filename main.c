@@ -4,7 +4,7 @@ void	select_type(int type)
 {
 	if (type == 1)
 		mandelbrot();
-	else if (type == 1)
+	else if (type == 2)
 		return;
 	else
 		return;

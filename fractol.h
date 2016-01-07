@@ -23,6 +23,8 @@ typedef struct	s_env
 	int			sizeline;
 	int			color;
 	double		z;
+	float		move_x;
+	float		move_y;
 }				t_env;
 
 typedef struct	s_point
@@ -39,6 +41,7 @@ int 	expose_hook(t_env *e);
 int		mandelbrot(void);
 int 	key_hook(int keycode, t_env *e);
 int		fractal_mandelbrot(t_point *p);
+void	set_mandel(t_env *e);
 
 
 #endif
